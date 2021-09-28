@@ -1,0 +1,19 @@
+footer
+{
+    
+    color: brown;
+    font-size: 15px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+
+}
+
+header
+{
+    background-color: cadetblue;
+    padding: 15px;
+    text-align: center;
+}
