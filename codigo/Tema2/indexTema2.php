@@ -13,7 +13,9 @@
         <h2>Index principal del Tema 2</h2>
     </header>
     <main>
-        
+        <?php
+            phpinfo();
+        ?>
     </main>
     <footer>Footer de David</footer>
 </body>
