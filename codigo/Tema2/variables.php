@@ -127,22 +127,55 @@
             print_r($_SESSION);
 
             echo "SERVER";
-            print_r($_SERVER);
+            //print_r($_SERVER);
 
 
             //PASO DE VARIABLES
-            echo"PASO DE VARIABLES POR GET";
+            //echo"PASO DE VARIABLES POR GET";
             if(isset($_GET['nombre']) && $_GET('nombre')=='David')
                 echo $_GET ['nombre'];
             else
-                echo"No hay nombre";    
+                echo"No hay nombre";
+                
+            //Prueba de variables globales locales y estaticas   
+            $a =1;
+            function ambito()
+            {
+                global $a;
+                echo "<br>",$a;
+            }    
             
+            
+            function contador()
+            {
+                static $c=0;
+                $c++;
+                echo "<br>",$c;
+            }
 
+            ambito();
+            contador();
+            contador();    
 
+            //Constante, booleanos, entero, float y cadena
+            
+            echo "<h1>CONSTANTES</h1>";
 
+            define("USUARIO", "David");
+            echo USUARIO;
 
+            const NOMBRE="Juan";
+            echo "<br/>",NOMBRE;
 
+            echo "<h1>INCLUIR FICHEROS</h1>";
+            //echo "Saludo desde ".basename($_SERVER('SCRIPT_FILENAME'))
+
+            require("Saludo.php");
+            require("misConstantes.php");
+            echo "<br>", USER;
+            var_dump($_SERVER);
         ?>
+
     </main>
     <footer>Footer de David</footer>
 </body>
