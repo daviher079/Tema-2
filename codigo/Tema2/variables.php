@@ -168,14 +168,50 @@
             echo "<br/>",NOMBRE;
 
             echo "<h1>INCLUIR FICHEROS</h1>";
-            //echo "Saludo desde ".basename($_SERVER('SCRIPT_FILENAME'))
+            //echo "Saludo desde ".basename($_SERVER['SCRIPT_FILENAME']); EL NOMBRE DEL FICHERO QUE SE ESTA EJECUTANDO EN ESE MOMENTO
 
-            require("Saludo.php");
-            require("misConstantes.php");
-            echo "<br>", USER;
-            var_dump($_SERVER);
+            //require("Saludo.php");
+            require("/var/www/seguro/misConstantes.php");
+            echo "<br>", USER,"<br>";
+            //var_dump($_SERVER);
+            echo "Prueba";
+
+            
         ?>
+        <a href="#">PReuba2</a>
+        <a href="codigo.php?variablePHP=<?
+            $pagina=basename($_SERVER['SCRIPT_FILENAME']);
+            echo $pagina;
 
+        ?>">Ver Codigo PHP</a>
+
+        <?
+
+            //FECHAS
+
+            echo "<br>", "FECHAAAAAS","<br>";
+            $fecha=time();//Segundos desde 1970
+
+            echo $fecha,"<br>";
+
+            //ZONA HORARIA SERVIDOR
+
+            
+            echo "<br>", date_default_timezone_set("Europe/Sarajevo");
+            echo "<br>", date_default_timezone_get();
+            echo "<br>", date ('d-m-y h:i:s', time());
+
+            //strtotime
+            echo "<br>","Cumpleaños de Ismael","<br>";
+
+            $cumple2= strtotime('07-27-01');
+            //m-d-y
+            $cumple= strtotime('01-07-27');
+            
+            echo "<br>",$cumple,"<br>";
+            echo date('d-m-y h:i:s',$cumple)
+
+        ?>
     </main>
     <footer>Footer de David</footer>
 </body>
