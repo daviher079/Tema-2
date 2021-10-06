@@ -209,8 +209,24 @@
             $cumple= strtotime('01-07-27');
             
             echo "<br>",$cumple,"<br>";
-            echo date('d-m-y h:i:s',$cumple)
+            echo date('d-m-y h:i:s',$cumple);
 
+            $hoy=time();
+            echo "<p>";
+            echo date ('d-m-y h:i:s', strtotime("+ 1 week 2 hours")), "<br>";
+            echo date ('d-m-y h:i:s', strtotime("next Monday")), "<br>";  
+            //echo date_diff(time, strtotime("last Thursday"));  
+            $diaObjeto=new DateTime();
+            $diaObjeto2=new DateTime('2021-01-01');
+            echo ($diaObjeto2->diff($diaObjeto))->format('%R%a days');
+           
+            $diaMKtime= mktime(5,42,50,10,6,2021);
+            echo "<br/>", date ('d-m-y h:i:s', $diaMKtime);
+
+            echo "<br>";
+            print_r (getdate());
+            $pruebaDia=getdate();
+            echo "<br>",$pruebaDia['wday'];
         ?>
     </main>
     <footer>Footer de David</footer>
