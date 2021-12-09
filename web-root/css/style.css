@@ -24,13 +24,7 @@ h1
     font-size: 45px;
 }
 
-.indexTema2
-{
-    display: flex;
-    padding: 50px;
-    flex-direction: column;
-    
-}
+
 
 .indexTema2 h2
 {
@@ -49,6 +43,7 @@ h1
 {
     margin-top: 50px;
 }
+
 
 main
 {
