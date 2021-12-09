@@ -4,13 +4,75 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../web-root/css/resetCSS.css"/>
-    <link rel="stylesheet" href="../web-root/css/style.css"/>
-    
+    <link rel="stylesheet" href="../web-root/css/resetCSS.css"/> 
     <title>indexTema2</title>
+    <style>
+        .logo
+        {
+
+            left: 0;
+            height: 90px;
+        }
+
+        header h1
+        {
+            padding: 30px;
+            color: #d02b4d;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 3.2em;
+        }
+
+        header
+        {
+            background-color: white;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        footer
+        {
+            position: fixed;
+            bottom: 0;
+            background-color: #d02b4d;
+        }
+
+        footer p
+        {
+            padding: 5px;
+            color: white;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 16px;
+        }
+
+        .indexTema2
+        {
+            padding: 0px 100px;
+        }
+
+        .indexTema2 h2
+        {
+            margin-top: 50px;
+            padding: 30px;
+            color: #d02b4d;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 2.2em;
+        }
+
+        .indexTema2 p
+        {   
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 1.1em;
+        }
+    </style>
 </head>
 <body>
     <header>
+        <img class="logo"src="../web-root/img/LogotipoDavidVicente.png">
         <h1>Index Tema 2</h1>
     </header>
     <!-- echo para escribir texto normal o texto con etiquetas HTML -->
@@ -23,8 +85,6 @@
             ?>
         </p>
 
-        
-
         <p>
             <?
                 printf("%d", "17.999");
@@ -36,8 +96,6 @@
                 printf("%s", "17.999");
             ?>
         </p>
-
-        
 
         <p>
             <?
@@ -80,6 +138,7 @@
     </main>
     <footer>
         <p>Footer de David</p>
+        <a href="../index.html"><img src="../web-root/img/volver.png" height="20px"></a>
     </footer>
 </body>
 </html>
